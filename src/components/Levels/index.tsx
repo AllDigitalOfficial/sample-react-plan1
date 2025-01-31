@@ -10,7 +10,12 @@ const Levels = () => {
     import.meta.env.VITE_APP_LEVEL_CARD_TEXT_COLOR || "#000000";
   const percentageColor =
     import.meta.env.VITE_APP_LEVEL_PERCENTAGE_COLOR || "#000000";
-  const initialValue = import.meta.env.VITE_APP_LEVEL_INITIAL_VALUE || 0;
+
+  // Fetch level values from environment variables
+  const levels = Array.from({ length: 10 }, (_, index) => {
+    const levelValue = import.meta.env[`VITE_APP_LEVEL_${index + 1}_VALUE`] || 0;
+    return { level: index + 1, value: parseFloat(levelValue) };
+  });
 
   return (
     <section
@@ -26,8 +31,7 @@ const Levels = () => {
           Referral Levels
         </h2>
         <div className="row">
-          {Array.from({ length: 7 }, (_, index) => {
-            const level = index + 1;
+          {levels.map(({ level, value }) => {
             const percentage = `${level * 1}%`; // Logic for percentage
 
             return (
@@ -61,7 +65,7 @@ const Levels = () => {
                         fontWeight: "bold",
                       }}
                     >
-                      {initialValue}
+                      {value}
                     </h3>
                   </div>
                 </div>

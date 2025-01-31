@@ -68,9 +68,9 @@ const HeroSection: React.FC = () => {
                 fontSize: "2.5rem",
               }}
             >
-              Fuel your crypto ambitions
+              Empowering Trust and Transparency with BNB
               <br />
-              with BNB.
+              Smart Contracts!
             </h2>
             <div>
               <p className="mb-0" style={{ color: profitTextColor }}>

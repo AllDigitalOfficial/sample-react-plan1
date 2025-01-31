@@ -17,7 +17,7 @@ const App: React.FC = () => {
   // Change background color, font, and other settings when the component mounts
   useEffect(() => {
     // Set document title
-    document.title = import.meta.env.VITE_APP_TITLE || "BnbOath";
+    document.title = import.meta.env.VITE_APP_TITLE || "BnbBond";
 
     // Set favicon
     const favicon = document.querySelector(

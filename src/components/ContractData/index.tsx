@@ -18,6 +18,7 @@ const ContractData = () => {
   const contractBalanceColor =
     import.meta.env.VITE_APP_CONTRACT_BALANCE_COLOR || "#2d4c70";
   const cardTextColor = import.meta.env.VITE_APP_CARD_TEXT_COLOR || "#ffffff";
+  const cardTitleColor = import.meta.env.VITE_APP_CARD_TITLE_COLOR || "#FFD700"; // Color for card titles
 
   // Create an object with all the necessary data
   const contractData = {
@@ -45,12 +46,17 @@ const ContractData = () => {
               }}
             >
               {/* Card Title */}
-              <h5 className="mt-3" style={{ color: cardTextColor }}>
+              <h5
+                className="mt-3"
+                style={{
+                  color: cardTitleColor, // Use dynamic card title color from .env
+                }}
+              >
                 {card.title}
               </h5>
 
               {/* Card Value */}
-              <p id={card.id} className="fs-5 fw-bold text-white">
+              <p id={card.id} className="fs-5 fw-bold" style={{ color: cardTextColor }}>
                 {card.value} {card.unit && <span>{card.unit}</span>}
               </p>
             </div>

@@ -3,7 +3,7 @@ import { Navbar, Container, Nav, Button, Row, Col } from "react-bootstrap";
 const Navbars = () => {
   const {
     VITE_APP_NAVBAR_BG_COLOR: navbarBgColor = "#292d36",
-    VITE_APP_NAVBAR_TEXT_COLOR: navbarTextColor = "#ffffff",
+    // VITE_APP_NAVBAR_TEXT_COLOR: navbarTextColor = "#ffffff",
     VITE_APP_BUTTON_BG_COLOR: buttonBgColor = "#007bff",
     VITE_APP_BUTTON_TEXT_COLOR: buttonTextColor = "#ffffff",
     VITE_APP_BUTTON_BORDER_COLOR: buttonBorderColor = "#007bff",
@@ -28,7 +28,7 @@ const Navbars = () => {
             className="text-center text-lg-start mb-3 mb-lg-0"
           >
             <Navbar.Brand href="#home" className="navbar-brand-custom">
-              <img alt="Logo" src="/bnboath.png" className="logo" width={150} />
+              <img alt="Logo" src="/bnbbond.png" className="logo" width={150} />
             </Navbar.Brand>
           </Col>
 

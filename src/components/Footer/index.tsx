@@ -10,7 +10,7 @@ const Footer = () => {
   return (
     <footer style={{ backgroundColor: bgColor, color: textColor }}>
       <div className="footer-content text-center py-3">
-        <p>{companyName} © {currentYear} . All rights reserved.</p>
+        <p>{companyName} © {currentYear} . All Rights Reserved.</p>
       </div>
     </footer>
   );

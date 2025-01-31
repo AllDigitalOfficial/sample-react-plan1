@@ -4,7 +4,7 @@ const Referral: React.FC = () => {
   // Get environment variable values with fallback values
   const bgColor = import.meta.env.VITE_APP_REFERRAL_BG_COLOR || "#111827";
   const textColor = import.meta.env.VITE_APP_REFERRAL_TEXT_COLOR || "#ffffff";
-  const cardBgColor = import.meta.env.VITE_APP_CARD_BG_COLOR || "#192337";
+  const cardBgColor = import.meta.env.VITE_APP_CARDD_BG_COLOR || "#192337";
   const cardTextColor = import.meta.env.VITE_APP_CARD_TEXT_COLOR || "#ffffff";
   const buttonColor = import.meta.env.VITE_APP_BUTTON_COLOR || "#007bff";
   const buttonHoverColor = import.meta.env.VITE_APP_BUTTON_HOVER_COLOR || "#0056b3";
