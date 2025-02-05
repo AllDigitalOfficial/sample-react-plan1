@@ -9,7 +9,7 @@ const HeroSection: React.FC = () => {
   const buttonOutlineColor =
     import.meta.env.VITE_APP_HERO_BUTTON_OUTLINE_COLOR || "#007bff";
   const presentationLink =
-    import.meta.env.VITE_APP_HERO_PRESENTATION_LINK || "BnbOath PPT.pdf";
+    import.meta.env.VITE_APP_HERO_PRESENTATION_LINK || "bnbbond.pdf";
   const smartContractLink =
     import.meta.env.VITE_APP_HERO_SMART_CONTRACT || "#smart-contract";
   const rightSectionBgColor =
@@ -33,6 +33,9 @@ const HeroSection: React.FC = () => {
   const contractAmountBonus =
     import.meta.env.VITE_APP_HERO_CONTRACT_AMOUNT_BONUS ||
     "+0.1% for every 500 BNB on platform address balance";
+
+  // Heading text from environment variable
+  const headingText = import.meta.env.VITE_APP_HERO_HEADING_TEXT || "Empowering Trust and Transparency with BNB Smart Contracts!";
 
   return (
     <Container
@@ -64,9 +67,12 @@ const HeroSection: React.FC = () => {
                 fontSize: "2.5rem",
               }}
             >
-              Empowering Trust and Transparency with BNB
-              <br />
-              Smart Contracts!
+              {headingText.split("\n").map((line:number, index:number) => (
+                <React.Fragment key={index}>
+                  {line}
+                  <br />
+                </React.Fragment>
+              ))}
             </h2>
             <div>
               <p className="mb-0" style={{ color: profitTextColor }}>
