@@ -1,4 +1,3 @@
-import React from "react";
 import {
   getCardDataContractData,
   CardData,
@@ -6,19 +5,19 @@ import {
 
 const ContractData = () => {
   // Fetching values from environment variables with fallback values
-  const depositAmount = import.meta.env.VITE_APP_DEPOSIT_AMOUNT || "0.600 BNB";
-  const totalUsers = import.meta.env.VITE_APP_TOTAL_USERS || "9";
+  const depositAmount = import.meta.env.VITE_APP_CONTRACT_DEPOSIT_AMOUNT || "0.600 BNB";
+  const totalUsers = import.meta.env.VITE_APP_CONTRACT_TOTAL_USERS || "9";
   const withdrawnAmount =
-    import.meta.env.VITE_APP_WITHDRAWN_AMOUNT || "0.408 BNB";
+    import.meta.env.VITE_APP_CONTRACT_WITHDRAWN_AMOUNT || "0.408 BNB";
   const refRewardsAmount =
-    import.meta.env.VITE_APP_REF_REWARDS_AMOUNT || "0.052 BNB";
+    import.meta.env.VITE_APP_CONTRACT_REF_REWARDS_AMOUNT || "0.052 BNB";
 
   // Define environment variables for styles
-  const cardBgColor = import.meta.env.VITE_APP_CARD_BG_COLOR || "#121212";
+  const cardBgColor = import.meta.env.VITE_APP_CONTRACT_CARD_BG_COLOR || "#121212";
   const contractBalanceColor =
     import.meta.env.VITE_APP_CONTRACT_BALANCE_COLOR || "#2d4c70";
-  const cardTextColor = import.meta.env.VITE_APP_CARD_TEXT_COLOR || "#ffffff";
-  const cardTitleColor = import.meta.env.VITE_APP_CARD_TITLE_COLOR || "#FFD700"; // Color for card titles
+  const cardTextColor = import.meta.env.VITE_APP_CONTRACT_CARD_TEXT_COLOR || "#ffffff";
+  const cardTitleColor = import.meta.env.VITE_APP_CONTRACT_CARD_TITLE_COLOR || "#FFD700"; // Color for card titles
 
   // Create an object with all the necessary data
   const contractData = {

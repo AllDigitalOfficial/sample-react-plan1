@@ -3,11 +3,10 @@ import { Navbar, Container, Nav, Button, Row, Col } from "react-bootstrap";
 const Navbars = () => {
   const {
     VITE_APP_NAVBAR_BG_COLOR: navbarBgColor = "#292d36",
-    // VITE_APP_NAVBAR_TEXT_COLOR: navbarTextColor = "#ffffff",
-    VITE_APP_BUTTON_BG_COLOR: buttonBgColor = "#007bff",
-    VITE_APP_BUTTON_TEXT_COLOR: buttonTextColor = "#ffffff",
-    VITE_APP_BUTTON_BORDER_COLOR: buttonBorderColor = "#007bff",
-    VITE_APP_DEPOSIT_LINK: depositLink = "#deposit",
+    VITE_APP_NAVBAR_BUTTON_BG_COLOR: buttonBgColor = "#007bff",
+    VITE_APP_NAVBAR_BUTTON_TEXT_COLOR: buttonTextColor = "#ffffff",
+    VITE_APP_NAVBAR_BUTTON_BORDER_COLOR: buttonBorderColor = "#007bff",
+    VITE_APP_NAVBAR_DEPOSIT_LINK: depositLink = "#deposit",
   } = import.meta.env;
 
   return (

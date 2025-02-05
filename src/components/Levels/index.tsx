@@ -1,5 +1,3 @@
-import React from "react";
-
 const Levels = () => {
   // Get environment variable values with fallback values
   const sectionBgColor =

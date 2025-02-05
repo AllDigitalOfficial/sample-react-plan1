@@ -5,37 +5,33 @@ const HeroSection: React.FC = () => {
   // Get environment variable values for HeroSection
   const heroBgColor = import.meta.env.VITE_APP_HERO_BG_COLOR || "#292d36";
   const heroTextColor = import.meta.env.VITE_APP_HERO_TEXT_COLOR || "#ffffff";
-  const buttonColor = import.meta.env.VITE_APP_BUTTON_COLOR || "#007bff";
+  const buttonColor = import.meta.env.VITE_APP_HERO_BUTTON_COLOR || "#007bff";
   const buttonOutlineColor =
-    import.meta.env.VITE_APP_BUTTON_OUTLINE_COLOR || "#007bff";
+    import.meta.env.VITE_APP_HERO_BUTTON_OUTLINE_COLOR || "#007bff";
   const presentationLink =
-    import.meta.env.VITE_APP_PRESENTATION_LINK || "BnbOath PPT.pdf";
+    import.meta.env.VITE_APP_HERO_PRESENTATION_LINK || "BnbOath PPT.pdf";
   const smartContractLink =
-    import.meta.env.VITE_APP_SMART_CONTRACT || "#smart-contract";
+    import.meta.env.VITE_APP_HERO_SMART_CONTRACT || "#smart-contract";
   const rightSectionBgColor =
-    import.meta.env.VITE_APP_RIGHT_SECTION_BG_COLOR || "#212529";
-  const titleColor = import.meta.env.VITE_APP_TITLE_COLOR || "#ffd700";
-  const balanceColor = import.meta.env.VITE_APP_BALANCE_COLOR || "#28a745";
-  const withdrawnBgColor =
-    import.meta.env.VITE_APP_WITHDRAWN_BG_COLOR || "#343a40";
-  const withdrawnTextColor =
-    import.meta.env.VITE_APP_WITHDRAWN_TEXT_COLOR || "#dc3545";
+    import.meta.env.VITE_APP_HERO_RIGHT_SECTION_BG_COLOR || "#212529";
+  const titleColor = import.meta.env.VITE_APP_HERO_TITLE_COLOR || "#ffd700";
   const profitTextColor =
-    import.meta.env.VITE_APP_PROFIT_TEXT_COLOR || "#ffffff";
+    import.meta.env.VITE_APP_HERO_PROFIT_TEXT_COLOR || "#ffffff";
   const profitSectionBgColor =
-    import.meta.env.VITE_APP_PROFIT_SECTION_BG_COLOR || "#292d36";
+    import.meta.env.VITE_APP_HERO_PROFIT_SECTION_BG_COLOR || "#292d36";
 
   // Get balance data from environment variables
   const contractBalance =
-    import.meta.env.VITE_APP_CONTRACT_BALANCE || "0.000 BNB";
-  const totalWithdrawn = import.meta.env.VITE_APP_TOTAL_WITHDRAWN || "0.000";
+    import.meta.env.VITE_APP_HERO_CONTRACT_BALANCE || "0.000 BNB";
+  const contractBalanceColor =
+    import.meta.env.VITE_APP_HERO_CONTRACT_BALANCE_COLOR || "#28a745";
   const basicInterestRate =
-    import.meta.env.VITE_APP_BASIC_INTEREST_RATE || "4% every 24 hrs";
+    import.meta.env.VITE_APP_HERO_BASIC_INTEREST_RATE || "0.5% every 24 hrs";
   const holdBonus =
-    import.meta.env.VITE_APP_HOLD_BONUS ||
+    import.meta.env.VITE_APP_HERO_HOLD_BONUS ||
     "+0.1% for every 24 hrs without withdrawal";
   const contractAmountBonus =
-    import.meta.env.VITE_APP_CONTRACT_AMOUNT_BONUS ||
+    import.meta.env.VITE_APP_HERO_CONTRACT_AMOUNT_BONUS ||
     "+0.1% for every 500 BNB on platform address balance";
 
   return (
@@ -121,7 +117,7 @@ const HeroSection: React.FC = () => {
           </div>
         </div>
 
-        {/* Right Section: Contract Balance and User Info */}
+        {/* Right Section: Contract Balance */}
         <div className="col-lg-6 col-md-6 d-flex justify-content-center align-items-center">
           <div
             style={{
@@ -152,34 +148,10 @@ const HeroSection: React.FC = () => {
                   margin: 0,
                   fontSize: "2rem",
                   fontWeight: "700",
-                  color: balanceColor,
+                  color: contractBalanceColor,
                 }}
               >
                 {contractBalance}
-              </p>
-            </div>
-
-            {/* Total Withdrawns */}
-            <div
-              style={{
-                backgroundColor: withdrawnBgColor,
-                padding: "15px",
-                borderRadius: "10px",
-                textAlign: "center",
-              }}
-            >
-              <p style={{ margin: 0, fontSize: "1.2rem", fontWeight: "700" }}>
-                Total Withdrawn
-              </p>
-              <p
-                style={{
-                  margin: 0,
-                  fontSize: "1.8rem",
-                  fontWeight: "700",
-                  color: withdrawnTextColor,
-                }}
-              >
-                {totalWithdrawn}
               </p>
             </div>
           </div>
